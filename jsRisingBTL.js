@@ -24,12 +24,12 @@ function ComenzarIngreso ()
 while(contador<1){
  	edad=prompt("Ingrese la edad");
  	edad=parseInt(edad);
- 		while (edad<18 || edad>90){
+ 		while (edad<18 || edad>90 || isNaN(edad)){
  			edad=prompt("Error. Ingrese la edad");
  			edad=parseInt(edad);
  		}
  	document.getElementById('Edad').value=edad;
- 	sexo=prompt("Ingrese el sexo. m:Masculino, f:Femenino");
+ 	sexo=prompt("Ingrese el sexo. m: Masculino, f: Femenino");
  		while (sexo == "M"|| sexo=="F"){
  			sexo=prompt("Error. Ingrese el sexo. m:Masculino, f:Femenino");
  		}
@@ -44,7 +44,7 @@ while(contador<1){
  	document.getElementById('Sexo').value=sexo;
  	estadocivil=prompt("Ingrese el estado civil. 1:solteros, 2:casados, 3:divorciado, 4:viudo");
  	estadocivil=parseInt(estadocivil);
- 		while (!(estadocivil==1 || estadocivil==2 || estadocivil==3 || estadocivil==4)){
+ 		while (!(estadocivil==1 || estadocivil==2 || estadocivil==3 || estadocivil==4 ) || isNaN(estadocivil)){
  			estadocivil=prompt("Error. Ingrese el estado civil. 1:Soltere, 2:Casade, 3:Divorciade, 4:Viude");
  			estadocivil=parseInt(estadocivil);
  		}
@@ -64,15 +64,15 @@ while(contador<1){
  		}
  	document.getElementById('EstadoCivil').value=estadocivil;
  	sueldobruto=prompt("Ingrese el sueldo bruto");
- 	//sueldobruto=parseFloat(sueldobruto);
- 		if (sueldobruto<"8000"){
+ 	sueldobruto=parseFloat(sueldobruto);
+ 		if (sueldobruto<8000 || isNaN(sueldobruto)){
  			sueldobruto=prompt("Error. Ingrese el sueldo bruto");
- 			//sueldobruto=parseFloat(sueldobruto);
+ 			sueldobruto=parseFloat(sueldobruto);
  		}
  	document.getElementById('Sueldo').value=sueldobruto;
  	legajo=prompt("Ingrese el numero de legajo");
- 	slegajo=parseInt(legajo);
- 		while (legajo<1000){
+ 	legajo=parseInt(legajo);
+ 		while (legajo<1000 || legajo>9999 || isNaN(legajo)){
  			legajo=prompt("Error. Ingrese el numero de legajo");
  			legajo=parseInt(legajo);
  		}
